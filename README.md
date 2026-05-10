@@ -1,17 +1,77 @@
-# profile_app
+# 📱 Flutter Profile App
 
-A new Flutter project.
+A beautiful and responsive personal profile application built with Flutter.  
+This app showcases a developer profile including personal information, education, skills, and social media connections using modern Flutter UI components.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+# 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- Beautiful Responsive UI
+- Custom AppBar Design
+- Circular Profile Image
+- Personal Bio Section
+- Information Cards
+- Skills Section
+- Social Media Buttons
+- Clean Layout Structure
+- Mobile Friendly Design
+- Reusable Widgets
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# 🛠️ Built With
+
+- Flutter
+- Dart
+- Material Design
+
+---
+
+# 📸 App Sections
+
+## 🧑 Profile Section
+Displays:
+- Profile Picture
+- Name
+- Short Bio
+
+---
+
+## 📍 Information Cards
+
+### Location
+Shows current location:
+- Chittagong, Bangladesh
+
+### Education
+Shows educational background:
+- BSc in CSE at Port City International University
+
+### Skills
+Displays programming and development skills:
+- Flutter
+- Dart
+- Firebase
+- Git
+- C
+- C#
+- Java
+- Python
+
+---
+
+## 🌐 Social Media Section
+
+Includes:
+- Facebook
+- GitHub
+- Email
+
+---
+
+# 📂 Project Structure
+
+```bash
+lib/
+ ├── main.dart
