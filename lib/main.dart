@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'My Profile App',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple.shade900),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'My Profile'),
     );
@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
+
   final String title;
 
   @override
@@ -30,228 +32,167 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Widget? get Coloum => null;
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
+
     return Scaffold(
+      
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
-        title: Text(widget.title, style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+        backgroundColor: Colors.deepPurple,
+        title: Text(widget.title, style: const TextStyle(color: Colors.white)),
       ),
-
-
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-
-              // Profile Image
-              CircleAvatar(
-                radius: width * 0.15,
-                backgroundImage: const NetworkImage(
-                  "https://i.postimg.cc/W4FfXNcG/profile.jpg",
-                ),
-              ),
-
-              const SizedBox(height: 15),
-
-              // Name
-              const Text(
-                "Md Yeasin Khan",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const SizedBox(height: 5),
-
-              // Short Bio
-              const Text(
-                "Flutter Beginner & Future App Developer",
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.deepPurple,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-
-              const SizedBox(height: 15),
-
-              const Text(
-                "I love building mobile apps with Flutter.\n"
-                    "Learning new things every day and\n"
-                    "enjoying the journey! 🚀",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black54,
-                ),
-              ),
-
-              const SizedBox(height: 25),
-
-              // Location Card
-              infoCard(
-                icon: Icons.location_on,
-                title: "Location",
-                subtitle: "Chittagong, Bangladesh",
-                color: Colors.deepPurple,
-              ),
-
-              const SizedBox(height: 15),
-
-              // Education Card
-              infoCard(
-                icon: Icons.school,
-                title: "Education",
-                subtitle: "BSc in CSE in Port City International University",
-                color: Colors.green,
-              ),
-
-              const SizedBox(height: 15),
-
-              // Skills Card
-              infoCard(
-                icon: Icons.code,
-                title: "Skills",
-                subtitle:
-                "Flutter, Dart, Firebase, Git, C, C#, Java, Python",
-                color: Colors.blue,
-              ),
-
-              const SizedBox(height: 30),
-
-              const Text(
-                "Connect With Me",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              // Social Media Icons
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-
-                  socialButton(
-                    icon: Icons.facebook,
-                    color: Colors.blue,
-                    label: "Facebook",
-                  ),
-
-                  socialButton(
-                    icon: Icons.code,
-                    color: Colors.black,
-                    label: "GitHub",
-                  ),
-
-                  socialButton(
-                    icon: Icons.email,
-                    color: Colors.red,
-                    label: "Email",
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  // Information Card Widget
-  Widget infoCard({
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required Color color,
-  }) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Row(
-        children: [
-
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: color,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(
-              icon,
-              color: Colors.white,
-              size: 28,
-            ),
-          ),
-
-          const SizedBox(width: 15),
-
-          Expanded(
+          child: Center(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: color,
+                CircleAvatar(
+                  radius: width * 0.15,
+                  backgroundImage: const NetworkImage(
+                    'https://i.postimg.cc/W4FfXNcG/profile.jpg',
                   ),
                 ),
-
-                const SizedBox(height: 5),
-
-                Text(
-                  subtitle,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    color: Colors.black87,
-                  ),
+                SizedBox(height: 8,),
+                Text("Md. Yeasin khan", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                SizedBox(height: 8,),
+                Text("Flutter Beginner & Future App Developer", style: TextStyle(fontSize: 12,color: Colors.deepPurple, fontWeight: FontWeight.bold),),
+                SizedBox(height: 12,),
+                Text("I love building Mobile apps using flutter.\n Learning new things everyday and \n enjoying the journey!", style: TextStyle(fontSize: 12, color: Colors.black87), textAlign: TextAlign.center,),
+                SizedBox(height: 12,),
+                Card(
+                  icon: Icons.location_on,
+                  title: "Location",
+                  subtitle: "Dhaka, Bangladesh",
+                  color: Colors.deepPurple[100]!,
+                  iconColor: Colors.white,
+                  logoColor: Colors.deepPurple,
+                  titleColor: Colors.deepPurple,
                 ),
+                SizedBox(height: 12,),
+                Card(
+                  icon: Icons.school,
+                  title: "Education",
+                  subtitle: "BSc in CSE at Port City International University",
+                  color: const Color.fromARGB(255, 191, 228, 217)!,
+                  iconColor: Colors.white,
+                  logoColor: const Color.fromARGB(255, 1, 128, 43),
+                  titleColor: const Color.fromARGB(255, 1, 128, 43),
+                ),
+                SizedBox(height: 12,),
+                Card(
+                  icon: Icons.code,
+                  title: "Skills",
+                  subtitle: "Flutter, Dart, Java, Python",
+                  color: const Color.fromARGB(255, 182, 235, 248)!,
+                  iconColor: Colors.white,
+                  logoColor: const Color.fromARGB(255, 2, 192, 240),
+                  titleColor: const Color.fromARGB(255, 2, 192, 240),
+                ),
+                  SizedBox(height: 12,),
+                  Text("Connect with me", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                  SizedBox(height: 8,),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        SocialMediaIcons(icon: Icons.facebook, color: Colors.blue, lebel: "Facebook"),
+                        SocialMediaIcons(icon: Icons.code, color: const Color.fromARGB(255, 0, 0, 0)!, lebel: "Github"),
+                        SocialMediaIcons(icon: Icons.email, color: const Color.fromARGB(255, 252, 115, 4), lebel: "Mail"),
+                        
+                      ],
+                    ),
+                  ),
+
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-
-  // Social Button Widget
-  Widget socialButton({
-    required IconData icon,
-    required Color color,
-    required String label,
-  }) {
-    return Column(
-      children: [
-
-        CircleAvatar(
-          radius: 28,
-          backgroundColor: color,
-          child: Icon(
-            icon,
-            color: Colors.white,
-          ),
         ),
-
-        const SizedBox(height: 8),
-
-        Text(label),
-      ],
-    );
+      ),
+      );
   }
 }
+
+class Card extends StatelessWidget {
+  const Card({super.key,
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.color,
+    required this.iconColor,
+    required this.logoColor,
+    required this.titleColor,
+  });
+
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final Color color;
+  final Color iconColor;
+  final Color logoColor;
+  final Color titleColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+                  height: 80,
+                  width: 420,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(borderRadius: .circular(8), color: color),
+                  child: Row(
+                    mainAxisAlignment: .spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+
+                          //LOGO
+                          Container(
+                            height: 60,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: logoColor,
+                            ),
+
+                            //Icon
+                            child: Icon(icon, color: Color.fromARGB(255, 240, 240, 240),),
+                          ),
+                          SizedBox(width: 16),
+
+                          Column(
+                            crossAxisAlignment: .start,
+                            children: [
+                              Text(title, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: titleColor),),
+                              SizedBox(height: 8,),
+                              Text(subtitle, style: TextStyle(fontSize: 12, color: Colors.black),),
+                            ],
+                          ),
+                        ],  
+                      ),
+                    ],
+                  ),
+                );
+  }
+}
+
+Widget SocialMediaIcons({
+  required IconData icon,
+  required Color color,
+  required String lebel,
+}) {
+  return Column(
+    children: [
+      CircleAvatar(
+        radius: 28,
+        backgroundColor: color,
+        child: Icon(icon, color: Colors.white),
+      ),
+      SizedBox(height: 4),
+      Text(lebel),
+    ],
+  );
+}
+
