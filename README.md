@@ -75,3 +75,7 @@ Includes:
 ```bash
 lib/
  ├── main.dart
+
+## App Preview
+
+![Profile App Output](https://i.postimg.cc/Dz9T3Tc3/Output-preview.png)
