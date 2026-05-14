@@ -78,6 +78,4 @@ lib/
 
 ## App Preview
 
-![Profile App Output](https://i.postimg.cc/Dz9T3Tc3/Output-preview.png)
-
-<img src="https://i.postimg.cc/Dz9T3Tc3/Output-preview.png" width="300"/>
+![Image Alt](https://github.com/Mdyeasinkhan4/Profile_App/blob/28d7df0d652ead46754219f4ff7ef6ba913cba7d/Output_preview.png)
