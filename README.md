@@ -4,6 +4,9 @@ A beautiful and responsive personal profile application built with Flutter.
 This app showcases a developer profile including personal information, education, skills, and social media connections using modern Flutter UI components.
 
 ---
+## App Preview
+
+![Image Alt](https://github.com/Mdyeasinkhan4/Profile_App/blob/28d7df0d652ead46754219f4ff7ef6ba913cba7d/Output_preview.png)
 
 # 🚀 Features
 
@@ -76,6 +79,4 @@ Includes:
 lib/
  ├── main.dart
 
-## App Preview
 
-![Image Alt](https://github.com/Mdyeasinkhan4/Profile_App/blob/28d7df0d652ead46754219f4ff7ef6ba913cba7d/Output_preview.png)
